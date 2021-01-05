@@ -25,18 +25,28 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-primary alert-dismissible">
+                        <h4>Welcome Back!</h4>
+                        {{ Auth::user()->level }} - {{ Auth::user()->username }}
+                    </div>
+                </div>
                 <div class="col-lg-3 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>150</h3>
+                            @php
+                            $totalartikel = DB::table('artikel')->count();
+                            @endphp
+                            <h3>{{$totalartikel}}</h3>
 
-                            <p>New Orders</p>
+                            <p>Jumlah Artikel</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-bag"></i>
+                            <i class="fas fa-paint-brush"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{url('artikel')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -44,14 +54,18 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+                            @php
+                            $totalfoto = DB::table('galeri')->count();
+                            @endphp
+                            <h3>{{$totalfoto}}</h3>
 
-                            <p>Bounce Rate</p>
+                            <p>Foto Galeri</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-stats-bars"></i>
+                            <i class="fa fa-images"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{url('galeri')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -59,14 +73,18 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>44</h3>
+                            @php
+                            $totaluser = DB::table('users')->count();
+                            @endphp
+                            <h3>{{$totaluser}}</h3>
 
-                            <p>User Registrations</p>
+                            <p>User</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{url('admin')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
@@ -74,20 +92,20 @@
                     <!-- small box -->
                     <div class="small-box bg-danger">
                         <div class="inner">
-                            <h3>65</h3>
+                            <h3>Setting</h3>
 
-                            <p>Unique Visitors</p>
+                            <p>Setting your website info</p>
                         </div>
                         <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
+                            <i class="fa fa-cog"></i>
                         </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                        <a href="{{url('setting-web')}}" class="small-box-footer">More info <i
+                                class="fas fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
                 <!-- ./col -->
             </div>
         </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
 </div>
 @endsection
