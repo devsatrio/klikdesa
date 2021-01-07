@@ -138,7 +138,7 @@ button{
 .padding-20{padding: 20px;}
 
 .bg-white{ background-color: #fff; }
-.bg-grey{ background-color: #eff4ff;}
+.bg-grey{ background-color: #effff3;}
 .bg-dark{ background-color: #232323;}
 .bd-top{ border-top: 1px solid #eaeaea;}
 .bd-bottom{ border-bottom: 1px solid #eaeaea;}
@@ -270,11 +270,11 @@ button{
     margin: 5px;
 }
 .default-btn{
-    background-color: #1151d3;
+    background-color: #267c64;
     text-transform: uppercase;
     color: #fff;
     font-size: 12px;
-    border-radius: 0;
+    border-radius: 25px;
     line-height: 50px;
     font-weight: 600;
     display: inline-block;
@@ -304,7 +304,7 @@ a,a:hover, .overlay, img, .form-control,  .form-control:hover, button{
     position: fixed;
     left: 0;
     top: 0;
-    padding: 3px 0;
+    padding: px 0;
 }
 .navbar-fixed-top.header-section{
     background-color: #fff;
@@ -414,7 +414,7 @@ ul.nav > li > a.active{
 }
 .slicknav_menu {
     background: none;
-    padding: 4px 0;
+    padding: 10px 0;
     display:none;
     width: 100%;
     position: absolute;
@@ -422,7 +422,7 @@ ul.nav > li > a.active{
     top: 0;
 }
 .slicknav_nav {
-    background-color: #fff;
+    background-color: #38af55;
 }
 .slicknav_btn{
     background-color: transparent;
@@ -474,7 +474,7 @@ ul.nav > li > a.active{
     z-index: 1;
 }
 .hero-section:before{
-    background-image: url(../img/hero-wave.png);
+    /* background-image: url(../img/hero-wave.png); */
     background-repeat: no-repeat;
     background-position: right center;
     content: "";
@@ -595,12 +595,12 @@ ul.nav > li > a.active{
     padding: 10px;
 }
 .feature-content{
-    background-color: #eff4ff;
-    padding: 40px 30px;
+    /* background-color: #effff3;
+    padding: 40px 30px; */
     transition: all 0.2s ease-in-out;
 }
 .feature-content:hover{
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 10px 0 rgba(44, 117, 2, 0.136);
     transition: all 0.3s ease-in-out;
 }
 .feature-content i{
