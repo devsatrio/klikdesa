@@ -25,4 +25,10 @@ class FrontendController extends Controller
         $data_setting = DB::table('web_setting')->orderby('id','desc')->limit(1)->get();
         return view('frontend.home',['data'=>$data ,'setting'=>$data_setting, 'hitung'=>$count_slider , 'slider'=>$data_slider , 'artikel'=>$data_artikel]);
     }
+
+    public function galeri(){
+        $data_galeri = GaleriModel::orderby('id','desc')->paginate(2);
+
+        return view('frontend.galeri',['data_galeri' => $data_galeri]);
+    }
 }
