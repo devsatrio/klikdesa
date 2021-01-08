@@ -68,7 +68,7 @@
 
     @yield('content')
 
-    <footer class="footer-section align-center">
+    <footer class="footer-section align-center" style="position:static;">
         <div class="container">
             <p>&copy; 2018 Axuta Powered by TeamXcel</p>
         </div>

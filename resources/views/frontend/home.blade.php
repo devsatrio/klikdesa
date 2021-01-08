@@ -220,7 +220,7 @@
         </div>
         <div class="row feature-wrap mb-60">
             @foreach($data as $galeri)
-            <div class="col-md-3 col-4 xs-padding">
+            <div class="col-md-3 col-4 xs-padding mb-30">
                 <div class="feature-content text-center">
                     <img src="{{asset('images/galeri/'.$galeri->gambar)}}" style="width:100%;"
                         style="padding-bottom: 100px;">
@@ -229,7 +229,7 @@
             @endforeach
         </div>
         <div class="section-heading text-center" style="padding-top:40px;">
-            <a href="#" class="btn btn-success"
+            <a href="{{url('/list-galeri')}}" class="btn btn-success"
                 style="border-color: #4CAF50;color: #4CAF50; background-color:white; border-radius:40px;">Lihat Semua <i
                     class="fa fa-location"></i></a>
             <!-- <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p> -->
