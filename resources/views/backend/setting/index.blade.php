@@ -82,6 +82,16 @@
                                     name="link_youtube">
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Link Android</label>
+                                <input type="text" class="form-control" value="{{$row->link_android}}"
+                                    name="link_android">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Link Apple</label>
+                                <input type="text" class="form-control" value="{{$row->link_iphone}}"
+                                    name="link_iphone">
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputFile">Logo</label><br>
                                 <img src="{{asset('images/setting/'.$row->logo)}}" alt="" class="img-thumbnail"><br>
                                 <input type="file" class="form-control" name="logo" accept="image/*">

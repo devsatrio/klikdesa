@@ -52,14 +52,14 @@
                 <a href="#" class="navbar-brand" style="color: white;"><img src="{{asset('logo/logo3.png')}}" style="width:10%;" alt="Axuta"> Klik Desa</a>
                 <div class="d-flex menu-wrap">
                     <ul class="nav" >
-                        <li><a data-scroll class="nav-link active" href="#home" style="color: white;">Home <span
-                                    class="sr-only">(current)</span></a></li>
-                        <li><a data-scroll class="nav-link" href="#artikel" style="color: white;">Artikel</a></li>
-                        <li><a data-scroll class="nav-link" href="#galeri" style="color: white;">Galeri</a></li>
-                        <li><a data-scroll class="nav-link" href="#kontak" style="color: white;">Kontak kami</a></li>
+                        <li><a data-scroll class="nav-link active text-white" href="#home">Home</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#fitur">Fitur</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#screenshots">Screenshot</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#artikel">Artikel</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#galeri">Galeri</a></li>
                     </ul>
                     <div class="header-btn">
-                        <a href="#" class="default-btn">Login <i class="fa fa-user"></i></a>
+                        <a href="#contact" data-scroll class="default-btn">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -67,36 +67,6 @@
     </header><!-- Header Section -->
 
     @yield('content')
-
-    <!-- <div id="subscribe" class="subscribe-section padding">
-        <div class="container text-center">
-            <div class="subscribe-content">
-                <img class="logo" src="img/footer-Logo.png" alt="logo" />
-                <p>Lorem Ipsum is simply text of the printing and typesetting industry. <br>It has survived not only
-                    five centuries.</p>
-            </div>
-            <div class="subscribe-wrap">
-                <form action="#" class="subscribe-form">
-                    <input type="email" name="email" id="subs-email" class="form_input"
-                        placeholder="Enter Your Email Address...">
-                    <button type="submit" class="submit">Subscribe</button>
-                    <div id="subscribe-result">
-                        <p class="subscription-success"></p>
-                        <p class="subscription-error"></p>
-                    </div>
-                </form>
-            </div>
-            <div class="clearfix"></div>
-            <ul class="social-link">
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-skype"></i></a></li>
-                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-            </ul>
-        </div>
-    </div>Subscribe Section -->
 
     <footer class="footer-section align-center">
         <div class="container">

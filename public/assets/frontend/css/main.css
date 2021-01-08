@@ -474,7 +474,7 @@ ul.nav > li > a.active{
     z-index: 1;
 }
 .hero-section:before{
-    /* background-image: url(../img/hero-wave.png); */
+    background-image: url(../img/hero-wave-hijau.png);
     background-repeat: no-repeat;
     background-position: right center;
     content: "";
@@ -491,7 +491,7 @@ ul.nav > li > a.active{
     color: #222;
 }
 .hero-moc{
-    background-image: url(../img/mockup-1.png);
+    /* background-image: url(../img/mockup-1.png); */
     background-position: bottom right;
     background-repeat: no-repeat;
     content: "";

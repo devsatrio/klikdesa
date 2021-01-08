@@ -56,6 +56,7 @@ class ArtikelController extends Controller
         ArtikelModel::insert([
             'id_kategori'=>$request->kategori,
             'judul'=>$request->judul,
+            'subjudul'=>$request->subjudul,
             'slug'=>strtolower(str_replace(' ','-',$request->judul)),
             'isi'=>$request->isi,
             'pembuat'=>Auth::user()->id,
@@ -97,6 +98,7 @@ class ArtikelController extends Controller
             ->update([
                 'id_kategori'=>$request->kategori,
                 'judul'=>$request->judul,
+                'subjudul'=>$request->subjudul,
                 'slug'=>strtolower(str_replace(' ','-',$request->judul)),
                 'isi'=>$request->isi,
                 'pembuat'=>Auth::user()->id,
@@ -109,6 +111,7 @@ class ArtikelController extends Controller
             ->update([
             'id_kategori'=>$request->kategori,
             'judul'=>$request->judul,
+            'subjudul'=>$request->subjudul,
             'slug'=>strtolower(str_replace(' ','-',$request->judul)),
             'isi'=>$request->isi,
             'pembuat'=>Auth::user()->id,

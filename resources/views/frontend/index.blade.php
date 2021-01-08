@@ -1,10 +1,10 @@
 @extends('layouts/layout_user.base')
-<!--[if lt IE 8]>
+[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+        <![endif]
 @section('content')
 
-<!-- <section id="home" class="hero-section">
+<section id="home" class="hero-section">
     <div class="container">
         <div class="hero-content">
             <h1>The Perfect Landing Page to <br>Showcase Your App</h1>
@@ -16,37 +16,8 @@
         </div>
     </div>
     <div class="hero-moc"></div>
-</section>Hero Section -->
-
-<section id="home">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-
-        <div class="carousel-inner">
-            @if($hitung > 0)
-            @php $i=0; @endphp
-            @foreach($slider as $data_slider)
-            @if($i == 0)
-            <div class="carousel-item active text-right">
-                @else
-                <div class="carousel-item text-right">
-                    @endif
-                    <img src="{{asset('images/slider/'.$data_slider->gambar)}}" class="d-block w-100"
-                        style="padding-top:70px;" alt="...">
-                    <div class="carousel-caption d-none d-md-block right-caption text-left"
-                        style="padding-bottom: 200px;">
-                        <h1 style=" display: inline-block;background-color:black;padding:5px;opacity: 0.5;">
-                            {{$data_slider->judul}}</h1>
-                        <br>
-                        <h5 style=" display: inline-block;background-color:black;padding:5px;opacity: 0.5;">
-                            {{$data_slider->isi}}</h5>
-                    </div>
-                </div>
-                @php $i++; @endphp
-                @endforeach
-                @endif
-            </div>
-        </div>
 </section>
+
 
 <!-- <section id="home" class="hero-section">
         @foreach($slider as $data_slider2)
@@ -89,7 +60,7 @@
 </section><!-- Promo Section -->
 
 <section id="artikel" class="content-section bg-grey padding">
-    <div class="container">\
+    <div class="container">
         <div class="section-heading text-center mb-60">
             <h2>ARTIKEL</h2>
             <!-- <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p> -->

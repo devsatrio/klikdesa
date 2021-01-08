@@ -22,6 +22,6 @@ class FrontendController extends Controller
         $data_artikel = ArtikelModel::orderby('id','desc')->get();
         $count_slider = DB::table('slider')->count();
         $data_slider = SliderModel::select(DB::raw('slider.*'))->limit(1)->get();
-        return view('frontend.index',['data'=>$data , 'hitung'=>$count_slider , 'slider'=>$data_slider , 'artikel'=>$data_artikel]);
+        return view('frontend.home',['data'=>$data , 'hitung'=>$count_slider , 'slider'=>$data_slider , 'artikel'=>$data_artikel]);
     }
 }

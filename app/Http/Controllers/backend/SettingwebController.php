@@ -52,6 +52,8 @@ class SettingwebController extends Controller
                 'telp_dua'=>$request->telp_dua,
                 'link_fb'=>$request->link_fb,
                 'link_ig'=>$request->link_ig,
+                'link_android'=>$request->link_android,
+                'link_iphone'=>$request->link_iphone,
                 'link_youtube'=>$request->link_youtube,
                 'logo'=>$namelogo,
                 'favicon'=>$namefavicon,
@@ -79,6 +81,8 @@ class SettingwebController extends Controller
                 'telp_dua'=>$request->telp_dua,
                 'link_fb'=>$request->link_fb,
                 'link_ig'=>$request->link_ig,
+                'link_android'=>$request->link_android,
+                'link_iphone'=>$request->link_iphone,
                 'link_youtube'=>$request->link_youtube,
                 'logo'=>$input['imagename'],
             ]);
@@ -104,6 +108,8 @@ class SettingwebController extends Controller
                 'telp_dua'=>$request->telp_dua,
                 'link_fb'=>$request->link_fb,
                 'link_ig'=>$request->link_ig,
+                'link_android'=>$request->link_android,
+                'link_iphone'=>$request->link_iphone,
                 'link_youtube'=>$request->link_youtube,
                 'favicon'=>$input['imagename'],
             ]);
@@ -119,6 +125,8 @@ class SettingwebController extends Controller
                 'telp_dua'=>$request->telp_dua,
                 'link_fb'=>$request->link_fb,
                 'link_ig'=>$request->link_ig,
+                'link_android'=>$request->link_android,
+                'link_iphone'=>$request->link_iphone,
                 'link_youtube'=>$request->link_youtube,
             ]);
         }
