@@ -1,35 +1,40 @@
 @extends('layouts/layout_user.base')
 @section('content')
-
+@foreach($slider as $ds)
 <section id="home" class="hero-section row mr-0 ml-0 pt-5">
-    <div class="col-md-7 pl-0 pr-0 mt-5">
+    <div class="col-md-6 pl-0 pr-0 mt-5">
         <div class="text-center">
-            <h2 class="text-dark">The Perfect Landing</h2>
-            <p>Is amazing, modern and clean landing</p>
-            <div class="btn-group">
-                <a href="#"><img src="{{asset('assets/frontend/img/appstore.png')}}" alt="appstore"></a>
-                <a href="#"><img src="{{asset('assets/frontend/img/playstore.png')}}" alt="playsotre"></a>
+            <h2 class="text-dark pl-5 pr-5">{{$ds->judul}}</h2>
+            <p class="pl-5 pr-5">
+                <span class="pr-5">
+                    <b>{{$ds->isi}}</b>
+                </span>
+            </p>
+            @if($ds->link!='')
+            <div class="btn-group pl-5 pr-5">
+                <a href="{{$ds->link}}" target="blank()" class="default-btn">{{$ds->link_text}}</a>
             </div>
+            @endif
         </div>
     </div>
-    <div class="col-md-5 pl-0 pr-0">
-        <img src="{{asset('assets/frontend/img/mockup-1.png')}}" alt="" width="80%">
+    <div class="col-md-6 pl-0 pr-0 text-center">
+        <img class="pt-3" src="{{asset('images/slider/'.$ds->gambar)}}" alt="" width="50%">
     </div>
     </div>
 
 </section>
-
-<section class="content-section bg-grey padding">
+@endforeach
+<section class="content-section bg-grey padding pt-5 mt-5">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-5 pl-5s">
                 <div class="content-mockups">
-                    <div class="mockup-back"></div>
-                    <div class="mockup-front"></div>
+                    <img class="pt-3 img-thumbnail" src="{{asset('assets/frontend/img/gambar2.png')}}" alt="">
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-5 pl-5">
                 <div class="section-heading mb-40">
+                    <br><br>
                     <h2>How does this App Work?</h2>
                     <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p>
                 </div>
@@ -61,10 +66,10 @@
     </div>
 </section><!-- Content Section -->
 
-<section id="fitur" class="features-section padding">
+<section id="feature" class="features-section padding">
     <div class="container">
         <div class="section-heading text-center mb-60">
-            <h2>Advanced Features</h2>
+            <h2>Features</h2>
             <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p>
         </div>
         <div class="row feature-wrap">
@@ -89,27 +94,6 @@
                     <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
                 </div>
             </div><!-- Feature-3 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="feature-content text-center">
-                    <i class="icon-clock"></i>
-                    <h3>Time & Language</h3>
-                    <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
-                </div>
-            </div><!-- Feature-4 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="feature-content text-center">
-                    <i class="icon-layers"></i>
-                    <h3>Free Accounts</h3>
-                    <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
-                </div>
-            </div><!-- Feature-5 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="feature-content text-center">
-                    <i class="icon-refresh"></i>
-                    <h3>Updates & Security</h3>
-                    <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
-                </div>
-            </div><!-- Feature-5 -->
         </div>
     </div>
 </section><!-- Feature Section -->
@@ -139,16 +123,22 @@
                     <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa4.jpg')}}" alt="screenshot">
                 </div>
                 <div class="swiper-slide">
-                    <img class="w-100" src="{{asset('assets/frontend/img/screenshot-5.jpg')}}" alt="screenshot">
+                    <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa5.jpg')}}" alt="screenshot">
                 </div>
                 <div class="swiper-slide">
-                    <img class="w-100" src="{{asset('assets/frontend/img/screenshot-6.jpg')}}" alt="screenshot">
+                    <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa6.jpg')}}" alt="screenshot">
                 </div>
                 <div class="swiper-slide">
-                    <img class="w-100" src="{{asset('assets/frontend/img/screenshot-7.jpg')}}" alt="screenshot">
+                    <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa7.jpg')}}" alt="screenshot">
                 </div>
                 <div class="swiper-slide">
-                    <img class="w-100" src="{{asset('assets/frontend/img/screenshot-8.jpg')}}" alt="screenshot">
+                    <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa8.jpg')}}" alt="screenshot">
+                </div>
+                <div class="swiper-slide">
+                    <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa9.jpg')}}" alt="screenshot">
+                </div>
+                <div class="swiper-slide">
+                    <img class="w-100" src="{{asset('assets/frontend/ss/klikdesa10.jpg')}}" alt="screenshot">
                 </div>
             </div>
             <!-- Carousel Arrows -->
@@ -156,14 +146,14 @@
             <div class="swiper-prev"><i class=" arrow_carrot-left"></i></div>
         </div>
     </div>
-</section><!-- Screenshots Section -->
+</section>
 
 <section id="download" class="download-section padding">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-md-6">
                 <div class="download-content">
-                    <h2>Download Axuta App Today!</h2>
+                    <h2>Download Klik Desa Hari Ini!</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.It has survived not
                         only five centuries.</p>
                     <div class="btn-group">
@@ -173,41 +163,42 @@
                 </div>
             </div>
             <div class="col-md-6 xs-d-none">
-                <img src="{{asset('assets/frontend/img/download-moc.png')}}" alt="mockup" />
+                <img src="{{asset('assets/frontend/img/gambar1.png')}}" alt="mockup" class="img-thumbnail" />
             </div>
         </div>
     </div>
-</section> <!-- Download Section -->
-<section id="artikel" class="content-section bg-grey padding">
+</section>
+
+<section id="artikel" class="blog-section bg-grey padding">
     <div class="container">
-        <div class="section-heading text-center mb-60">
-            <h2>ARTIKEL</h2>
-            <!-- <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p> -->
+        <div class="section-heading mb-60 text-center">
+            <h2>Artikel</h2>
+            <p>Baca berita dan cerita terbaru tentang aplikasi klik desa</p>
         </div>
-        <div class="row row-cols-1 row-cols-md-1 g-4">
+        <div class="row">
             @foreach($artikel as $data_artikel)
-            <div class="col-md-6 col-6 xs-padding" style="display:block;">
-                <div class="card mb-3 feature-content" style="max-width: 540px;">
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <img src="{{asset('images/artikel/'.$data_artikel->gambar)}}" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a wider card withasdasdsadasdsadsa asdsadasdasd sadasd.</p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <div class="col-md-4 col-sm-6 xs-padding">
+                <div class="blog-box">
+                    <div class="blog-thumb">
+                        <img src="{{asset('images/artikel/'.$data_artikel->gambar)}}" alt="img">
+                        <div class="post-meta">
+                            <div>
+                                <span><i class="fa fa-tag"></i>{{$data_artikel->namakategori}}</span>
+                                <span><i class="fa fa-calendar"></i>{{$data_artikel->created_at}}</span>
                             </div>
                         </div>
+                    </div>
+                    <div class="blog-content">
+                        <h3><a href="#">{{$data_artikel->judul}}</a></h3>
+                        <p>{{$data_artikel->subjudul}}</p>
+                        <a href="#" class="read-more">Read More</a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
         <div class="section-heading text-center" style="padding-top:40px;">
-            <a href="#" class="default-btn"
-                >Lihat Semua <i
-                    class="fa fa-location"></i></a>
+            <a href="#" class="default-btn">Lihat Semua <i class="fa fa-location"></i></a>
             <!-- <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p> -->
         </div>
     </div>
@@ -236,73 +227,6 @@
         </div>
     </div>
 </section>
-<section id="blog" class="blog-section bg-grey padding">
-    <div class="container">
-        <div class="section-heading mb-60 text-center">
-            <h2>Latest Stories</h2>
-            <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="blog-box">
-                    <div class="blog-thumb">
-                        <img src="{{asset('assets/frontend/img/blog-1.jpg')}}" alt="img">
-                        <div class="post-meta">
-                            <div>
-                                <span><i class="fa fa-user"></i>By: Admin</span>
-                                <span><i class="fa fa-calendar"></i>Jan 01, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3><a href="#">No one cares about products. people care about ideas.</a></h3>
-                        <p>Lorem Ipsum is simply text of the printing and typesetting industry.It has survived not only
-                            five centuries.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div><!-- Post-1 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="blog-box">
-                    <div class="blog-thumb">
-                        <img src="{{asset('assets/frontend/img/blog-2.jpg')}}" alt="img">
-                        <div class="post-meta">
-                            <div>
-                                <span><i class="fa fa-user"></i>By: Admin</span>
-                                <span><i class="fa fa-calendar"></i>Jan 01, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3><a href="#">No one cares about products. people care about ideas.</a></h3>
-                        <p>Lorem Ipsum is simply text of the printing and typesetting industry.It has survived not only
-                            five centuries.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div><!-- Post-1 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="blog-box">
-                    <div class="blog-thumb">
-                        <img src="{{asset('assets/frontend/img/blog-3.jpg')}}" alt="img">
-                        <div class="post-meta">
-                            <div>
-                                <span><i class="fa fa-user"></i>By: Admin</span>
-                                <span><i class="fa fa-calendar"></i>Jan 01, 2018</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="blog-content">
-                        <h3><a href="#">No one cares about products. people care about ideas.</a></h3>
-                        <p>Lorem Ipsum is simply text of the printing and typesetting industry.It has survived not only
-                            five centuries.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-            </div><!-- Post-1 -->
-        </div>
-    </div>
-</section><!-- Blog Section -->
 
 <div id="contact" class="subscribe-section padding" style="background-color: #38af55;">
     <div class="container text-center">
@@ -333,5 +257,9 @@
         </ul>
     </div>
 </div>
-
+<footer class="footer-section align-center">
+    <div class="container">
+        <p>&copy; 2018 Axuta Powered by TeamXcel</p>
+    </div>
+</footer><!-- /.footer_section -->
 @endsection
