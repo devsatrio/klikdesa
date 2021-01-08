@@ -17,7 +17,7 @@
 }
 </style>
 
-<section id="galeri" class="features-section padding bg-grey">
+<section id="galeri" class="features-section padding">
     <div class="container">
         <div class="section-heading text-center mb-60">
             <h2>GALERI</h2>
