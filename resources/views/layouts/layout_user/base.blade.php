@@ -11,11 +11,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Axuta is a colofull app landing page template">
     <meta name="author" content="TeamXcel">
+    @php
+    $data_setting = DB::table('web_setting')->orderby('id','desc')->limit(1)->get();
+    @endphp
 
-    <title>Axuta | app landing page</title>
+    @foreach($data_setting as $set)
+    <title>{{$set->singkatan}}</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/img/favicon.png')}}">
-
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/setting/'.$set->favicon)}}">
+    @endforeach
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="{{asset('assets/frontend/css/font-awesome.min.css')}}">
     <!-- Elegant Font Icons CSS -->
@@ -53,7 +57,7 @@
                 <div class="d-flex menu-wrap">
                     <ul class="nav" >
                         <li><a data-scroll class="nav-link active text-white" href="#home">Home</a></li>
-                        <li><a data-scroll class="nav-link text-white" href="#fitur">Fitur</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#feature">Features</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#screenshots">Screenshot</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#artikel">Artikel</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#galeri">Galeri</a></li>
@@ -68,11 +72,7 @@
 
     @yield('content')
 
-    <footer class="footer-section align-center" style="position:static;">
-        <div class="container">
-            <p>&copy; 2018 Axuta Powered by TeamXcel</p>
-        </div>
-    </footer><!-- /.footer_section -->
+    
 
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 
