@@ -227,39 +227,35 @@
         </div>
     </div>
 </section>
-
+@foreach($setting as $set)
 <div id="contact" class="subscribe-section padding" style="background-color: #38af55;">
     <div class="container text-center">
         <div class="subscribe-content">
-            <img class="logo" src="{{asset('assets/frontend/img/footer-Logo.png')}}" alt="logo" />
-            <p>Lorem Ipsum is simply text of the printing and typesetting industry. <br>It has survived not only five
-                centuries.</p>
-        </div>
-        <div class="subscribe-wrap">
-            <form action="#" class="subscribe-form">
-                <input type="email" name="email" id="subs-email" class="form_input"
-                    placeholder="Enter Your Email Address...">
-                <button type="submit" class="submit">Subscribe</button>
-                <div id="subscribe-result">
-                    <p class="subscription-success"></p>
-                    <p class="subscription-error"></p>
-                </div>
-            </form>
+            <h1 class="text-white">Klik Desa Adalah</h1>
+            <p>{!!$set->deskripsi!!}</p>
         </div>
         <div class="clearfix"></div>
+        <div class="subscribe-content">
+            <h1 class="text-white">Hubungi Kami</h1>
+            <ul class="social-link">
+            <li class="text-white"><i class="fa fa-phone"></i> {{$set->telp_satu}}</li>
+            <li class="text-white"><i class="fa fa-phone"></i> {{$set->telp_dua}}</li>
+        </ul>
+        </div>
+        <div class="clearfix"></div>
+        <h2 class="text-white">Find us at</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.755382549861!2d112.06014021464763!3d-7.815697794368014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7857175f9cda31%3A0x3123610563e44ab3!2sSimpang%20Lima%20Gumul!5e0!3m2!1sid!2sid!4v1610118700892!5m2!1sid!2sid" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <ul class="social-link">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            <li><a href="{{$set->link_fb}}" target="blank()"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="{{$set->link_ig}}" target="blank()"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="{{$set->link_youtube}}" target="blank()"><i class="fa fa-youtube"></i></a></li>
         </ul>
     </div>
 </div>
+@endforeach
 <footer class="footer-section align-center">
     <div class="container">
-        <p>&copy; 2018 Axuta Powered by TeamXcel</p>
+        <p>&copy; 2021 Klik Desa</p>
     </div>
-</footer><!-- /.footer_section -->
+</footer>
 @endsection
