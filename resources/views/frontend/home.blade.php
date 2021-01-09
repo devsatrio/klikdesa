@@ -219,8 +219,9 @@
             @foreach($data as $galeri)
             <div class="col-md-3 xs-padding mb-30">
                 <div class="feature-content text-center">
-                    <img src="{{asset('images/galeri/'.$galeri->gambar)}}" style="float:left;width:100%;height:250px;object-fit: cover;" class="image-thumbnail">
+                    <img src="{{asset('images/galeri/'.$galeri->gambar)}}" style="float:left;width:100%;height:250px;object-fit: cover;" class="image-thumbnail mb-3">
                     <span> {{$galeri->judul}}</span>
+                    <br><br>
                 </div>
             </div>
             @endforeach
@@ -238,7 +239,7 @@
     <div class="container text-center">
         <div class="subscribe-content">
             <h1 class="text-white">Klik Desa Adalah</h1>
-            <p>{!!$set->deskripsi!!}</p>
+            <p class="text-white">{!!$set->deskripsi!!}</p>
         </div>
         <div class="clearfix"></div>
         <div class="subscribe-content">
