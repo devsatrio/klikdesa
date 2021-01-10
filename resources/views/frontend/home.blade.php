@@ -29,37 +29,18 @@
         <div class="row">
             <div class="col-lg-6 mt-5 pl-5s">
                 <div class="content-mockups">
-                    <img class="pt-3 img-thumbnail" src="{{asset('assets/frontend/img/gambar2.png')}}" alt="">
+                    <img class="pt-3 img-thumbnail" src="{{asset('assets/frontend/img/gambar2.png')}}" alt=""
+                        width="80%">
                 </div>
             </div>
             <div class="col-lg-6 mt-5 pl-5">
                 <div class="section-heading mb-40">
                     <br><br>
-                    <h2>How does this App Work?</h2>
-                    <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p>
-                </div>
-                <div class="content-lists">
-                    <div class="list-item">
-                        <i class="icon-tools"></i>
-                        <div class="list-content">
-                            <h3>Create Your Account</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry.</p>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <i class="icon-pictures"></i>
-                        <div class="list-content">
-                            <h3>Upload Your Picture</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry.</p>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <i class="icon-genius"></i>
-                        <div class="list-content">
-                            <h3>Get Your Own Time</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing <br> and typesetting industry.</p>
-                        </div>
-                    </div>
+                    <h2>Apa itu KlikDesa ?</h2>
+
+                    @foreach($setting as $set)
+                    <p>{!!$set->deskripsi!!}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -69,31 +50,35 @@
 <section id="feature" class="features-section padding">
     <div class="container">
         <div class="section-heading text-center mb-60">
-            <h2>Features</h2>
-            <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p>
+            <h2>Fitur</h2>
+            <p>Pada Aplikasi Klik Desa terdapat banyak fitur yang dapat di gunakan oleh warga desa. Salah satu fitur nya
+                adalah
+            </p>
         </div>
         <div class="row feature-wrap">
             <div class="col-md-4 col-sm-6">
                 <div class="feature-content text-center">
-                    <i class="fa fa-rocket"></i>
-                    <h3>Powerfull System</h3>
-                    <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
+                    <i class="fa fa-file" style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
+                    <h3>Lapor BPD / Pemdes</h3>
+                    <p>Pada fitur Lapor terdapat 2 fitur yaitu Lapor BPD dan Lapor Pemdes. Sehingga warga desa bisa
+                        menyalurkan aspirasi melalui fitur ini. </p>
                 </div>
             </div><!-- Feature-1 -->
             <div class="col-md-4 col-sm-6 xs-padding">
                 <div class="feature-content text-center">
-                    <i class="fa fa-users"></i>
-                    <h3>Personalization</h3>
-                    <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
-                </div>
-            </div><!-- Feature-2 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="feature-content text-center">
-                    <i class="fa fa-child"></i>
-                    <h3>Ease Of Access</h3>
-                    <p>Lorem ipsum dolor sit amet adipisicing of more of sedis do more eiusmod tempor incididunt.</p>
+                    <i class="fa fa-envelope" style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
+                    <h3>E-Surat</h3>
+                    <p>Pada menu e-surat, warga desa bisa membuat pengajuan surat dari rumah melalui smartphone mereka. Sehingga mengurangi proses antrian di kantor desa. Terdapat status surat sehingga bisa mengetahui status surat sedang diproses atau sudah selesai.</p>
                 </div>
             </div><!-- Feature-3 -->
+            <div class="col-md-4 col-sm-6 xs-padding">
+                <div class="feature-content text-center">
+                    <i class="fa fa-whatsapp" style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
+                    <h3>Direct Pesan WhatsApp</h3>
+                    <p>Pada menu Bumdes, Pasar Desa, Ojek Desa terdapat pesan direct ke WhatsApp sehingga memudahkan warga desa dalam berkomunikasi dalam proses transaksi jual beli barang dan jasa. </p>
+                </div>
+            </div><!-- Feature-2 -->
+            
         </div>
     </div>
 </section><!-- Feature Section -->
@@ -102,7 +87,7 @@
     <div class="container">
         <div class="section-heading mb-60 text-center">
             <h2>Screenshots</h2>
-            <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p>
+            <p>Berikut beberapa tampilan dari aplikasi Klik Desa</p>
         </div>
         <div class="swiper-container">
             <div class="mobile-mock">
@@ -159,10 +144,12 @@
                     @foreach($setting as $set)
                     <div class="btn-group">
                         @if($set->link_android!='')
-                        <a href="{{$set->link_android}}" target="blank()"><img src="{{asset('assets/frontend/img/appstore.png')}}" alt="btn"></a>
+                        <a href="{{$set->link_android}}" target="blank()"><img
+                                src="{{asset('assets/frontend/img/appstore.png')}}" alt="btn"></a>
                         @endif
                         @if($set->link_iphone!='')
-                        <a href="{{$set->link_iphone}}" target="blank()"><img src="{{asset('assets/frontend/img/playstore.png')}}" alt="btn"></a>
+                        <a href="{{$set->link_iphone}}" target="blank()"><img
+                                src="{{asset('assets/frontend/img/playstore.png')}}" alt="btn"></a>
                         @endif
                     </div>
                     @endforeach
@@ -219,7 +206,8 @@
             @foreach($data as $galeri)
             <div class="col-md-3 xs-padding mb-30">
                 <div class="feature-content text-center">
-                    <img src="{{asset('images/galeri/'.$galeri->gambar)}}" style="float:left;width:100%;height:250px;object-fit: cover;" class="image-thumbnail mb-3">
+                    <img src="{{asset('images/galeri/'.$galeri->gambar)}}"
+                        style="float:left;width:100%;height:250px;object-fit: cover;" class="image-thumbnail mb-3">
                     <span> {{$galeri->judul}}</span>
                     <br><br>
                 </div>
@@ -237,11 +225,6 @@
 @foreach($setting as $set)
 <div id="contact" class="subscribe-section padding" style="background-color: #38af55;">
     <div class="container text-center">
-        <div class="subscribe-content">
-            <h1 class="text-white">Klik Desa Adalah</h1>
-            <p class="text-white">{!!$set->deskripsi!!}</p>
-        </div>
-        <div class="clearfix"></div>
         <div class="subscribe-content">
             <h1 class="text-white">Hubungi Kami</h1>
             <ul class="social-link">
