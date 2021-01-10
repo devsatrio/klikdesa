@@ -31,4 +31,21 @@ class FrontendController extends Controller
         $data_galeri = GaleriModel::orderby('id','desc')->paginate(16);
         return view('frontend.galeri',['data_galeri' => $data_galeri]);
     }
+
+    public function artikel(){
+        
+        $data_artikel = ArtikelModel::select(DB::raw('artikel.*,kategori_artikel.nama as namakategori'))
+        ->leftjoin('kategori_artikel','kategori_artikel.id','=','artikel.id_kategori')
+        ->orderby('id','desc')->paginate(16);
+        return view('frontend.artikel',['data_artikel' => $data_artikel]);
+    }
+
+    public function detailartikel($slug){
+        $detail_artikel = ArtikelModel::select(DB::raw('artikel.*,kategori_artikel.nama as namakategori'))
+        ->leftjoin('kategori_artikel','kategori_artikel.id','=','artikel.id_kategori')
+        ->where('artikel.slug',$slug)
+        ->get();
+
+        return view('frontend.detailartikel',['detail' => $detail_artikel]);
+    }
 }

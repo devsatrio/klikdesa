@@ -184,14 +184,14 @@
                     <div class="blog-content">
                         <h3><a href="#">{{$data_artikel->judul}}</a></h3>
                         <p>{{$data_artikel->subjudul}}</p>
-                        <a href="#" class="read-more">Lanjut Baca</a>
+                        <a href="{{url('/detail-artikel/'.$data_artikel->slug)}}" class="read-more">Lanjut Baca</a>
                     </div>
                 </div>
             </div>
             @endforeach
         </div>
         <div class="section-heading text-center" style="padding-top:40px;">
-            <a href="#" class="default-btn">Lihat Semua <i class="fa fa-location"></i></a>
+            <a href="{{url('/list-artikel')}}" class="default-btn">Lihat Semua <i class="fa fa-location"></i></a>
             <!-- <p>Is amazing, modern and clean landing page for showcase <br> your app anything else.</p> -->
         </div>
     </div>

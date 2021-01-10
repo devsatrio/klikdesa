@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','frontend\FrontendController@index');
 
+
+Route::get('/detail-artikel/{slug}','frontend\FrontendController@detailartikel');
+Route::get('/list-artikel','frontend\FrontendController@artikel');
 Route::get('/list-galeri','frontend\FrontendController@galeri');
 Auth::routes();
 Route::get('/home', 'backend\HomeController@index')->name('home');
