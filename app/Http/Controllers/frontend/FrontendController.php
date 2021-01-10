@@ -27,12 +27,8 @@ class FrontendController extends Controller
     }
 
     public function galeri(){
-<<<<<<< HEAD
+        
         $data_galeri = GaleriModel::orderby('id','desc')->paginate(16);
-
-=======
-        $data_galeri = GaleriModel::orderby('id','desc')->paginate(8);
->>>>>>> 9451a0b4d92fae2e095234eac2e9aeb7096ac88c
         return view('frontend.galeri',['data_galeri' => $data_galeri]);
     }
 }
