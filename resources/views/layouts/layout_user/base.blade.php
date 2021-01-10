@@ -57,8 +57,9 @@
                 <div class="d-flex menu-wrap">
                     <ul class="nav" >
                         <li><a data-scroll class="nav-link active text-white" href="#home">Home</a></li>
-                        <li><a data-scroll class="nav-link text-white" href="#feature">Features</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#feature">Fitur</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#screenshots">Screenshot</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="#download">Download</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#artikel">Artikel</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#galeri">Galeri</a></li>
                     </ul>
