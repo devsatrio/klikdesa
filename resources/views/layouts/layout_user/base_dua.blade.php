@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="{{asset('assets/frontend/css/responsive.css')}}">
 
     <script src="{{asset('assets/frontend/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
-</head> 
+</head>
 
 <body data-spy="scroll" data-target="#navmenu" data-offset="70">
 
@@ -53,12 +53,15 @@
     <header id="header" class="header-section" style="background-color: #38af55;">
         <div class="container">
             <nav class="navbar">
-                <a href="{{url('/')}}" class="navbar-brand" style="color: white;"><img src="{{asset('logo/logo3.png')}}" style="width:10%;" alt="Axuta"> Klik Desa</a>
+                <a href="#" class="navbar-brand" style="color: white;"><img src="{{asset('logo/logo3.png')}}" style="width:10%;" alt="Axuta"> Klik Desa</a>
                 <div class="d-flex menu-wrap">
                     <ul class="nav" >
-                        <li><a data-scroll class="nav-link active text-white" href="{{url('/')}}">Home</a></li>
-                        <li><a data-scroll class="nav-link text-white" href="{{url('/list-artikel')}}">Artikel</a></li>
-                        <li><a data-scroll class="nav-link text-white" href="{{url('/list-berita')}}">Galeri</a></li>
+                        <li><a data-scroll class="nav-link active text-white" href="{{url('/')}}#home">Home</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="{{url('/')}}#feature">Fitur</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="{{url('/')}}#screenshots">Screenshot</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="{{url('/')}}#download">Download</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="{{url('/')}}#artikel">Artikel</a></li>
+                        <li><a data-scroll class="nav-link text-white" href="{{url('/')}}#galeri">Galeri</a></li>
                     </ul>
                     <div class="header-btn">
                         <a href="#contact" data-scroll class="default-btn">Contact</a>
