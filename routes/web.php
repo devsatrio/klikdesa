@@ -24,6 +24,7 @@ Route::resource('/kategori-artikel','backend\KategoriartikelController');
 Route::resource('/artikel','backend\ArtikelController');
 Route::resource('/komentar','backend\KomenartikelController');
 Route::resource('/slider','backend\SliderController');
+Route::resource('/fitur','backend\FiturController');
 Route::resource('/setting-web','backend\SettingwebController');
 
 //----------------------------------------------------------------------------------------

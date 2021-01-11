@@ -19,11 +19,12 @@ class FrontendController extends Controller
     public function index()
     {
         $data = GaleriModel::orderby('id','desc')->get();
+        $fitur = DB::table('fitur')->orderby('id','desc')->get();
         $data_artikel = DB::table('artikel')->select(DB::raw('artikel.*,kategori_artikel.nama as namakategori'))->leftjoin('kategori_artikel','artikel.id_kategori','=','kategori_artikel.id')->orderby('id','desc')->limit(8)->get();
         $count_slider = DB::table('slider')->count();
         $data_slider = SliderModel::orderby('id','desc')->limit(1)->get();
         $data_setting = DB::table('web_setting')->orderby('id','desc')->limit(1)->get();
-        return view('frontend.home',['data'=>$data ,'setting'=>$data_setting, 'hitung'=>$count_slider , 'slider'=>$data_slider , 'artikel'=>$data_artikel]);
+        return view('frontend.home',['data'=>$data,'fitur'=>$fitur ,'setting'=>$data_setting, 'hitung'=>$count_slider , 'slider'=>$data_slider , 'artikel'=>$data_artikel]);
     }
 
     public function galeri(){

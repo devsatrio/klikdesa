@@ -9,13 +9,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Axuta is a colofull app landing page template">
-    <meta name="author" content="TeamXcel">
     @php
     $data_setting = DB::table('web_setting')->orderby('id','desc')->limit(1)->get();
     @endphp
 
     @foreach($data_setting as $set)
+    <meta name="description" content="{{$set->meta}}">
+    <meta name="author" content="{{$set->singkatan}}">
     <title>{{$set->singkatan}}</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/setting/'.$set->favicon)}}">
@@ -53,9 +53,17 @@
     <header id="header" class="header-section" style="background-color: #38af55;">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="navbar-brand" style="color: white;"><img src="{{asset('logo/logo3.png')}}" style="width:10%;" alt="Axuta"> Klik Desa</a>
+                @php
+                $data_setting = DB::table('web_setting')->orderby('id','desc')->limit(1)->get();
+                @endphp
+
+                @foreach($data_setting as $set)
+                <a href="#" class="navbar-brand" style="color: white;">
+                <img src="{{asset('images/setting/'.$set->logo)}}" style="height:60px;" alt="{{$set->singkatan}}"> {{$set->nama}}</a>
+                @endforeach
+
                 <div class="d-flex menu-wrap">
-                    <ul class="nav" >
+                    <ul class="nav">
                         <li><a data-scroll class="nav-link active text-white" href="#home">Home</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#feature">Fitur</a></li>
                         <li><a data-scroll class="nav-link text-white" href="#screenshots">Screenshot</a></li>
@@ -73,7 +81,7 @@
 
     @yield('content')
 
-    
+
 
     <a data-scroll href="#header" id="scroll-to-top"><i class="arrow_carrot-up"></i></a>
 

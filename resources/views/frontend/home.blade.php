@@ -56,32 +56,20 @@
             </p>
         </div>
         <div class="row feature-wrap">
+            @foreach($fitur as $ftr)
             <div class="col-md-4 col-sm-6">
                 <div class="feature-content text-center">
-                    <i class="fa fa-file" style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
-                    <h3>Lapor BPD / Pemdes</h3>
-                    <p>Pada fitur Lapor terdapat 2 fitur yaitu Lapor BPD dan Lapor Pemdes. Sehingga warga desa bisa
-                        menyalurkan aspirasi melalui fitur ini. </p>
+                    <i class="{{$ftr->icon}}"
+                        style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
+                    <h3>{{$ftr->header}}</h3>
+                    <p>{{$ftr->isi}}</p>
                 </div>
-            </div><!-- Feature-1 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="feature-content text-center">
-                    <i class="fa fa-envelope" style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
-                    <h3>E-Surat</h3>
-                    <p>Pada menu e-surat, warga desa bisa membuat pengajuan surat dari rumah melalui smartphone mereka. Sehingga mengurangi proses antrian di kantor desa. Terdapat status surat sehingga bisa mengetahui status surat sedang diproses atau sudah selesai.</p>
-                </div>
-            </div><!-- Feature-3 -->
-            <div class="col-md-4 col-sm-6 xs-padding">
-                <div class="feature-content text-center">
-                    <i class="fa fa-whatsapp" style="background-image: linear-gradient(-45deg, #38af55 0%, #38af55 50%, #38af55 100%);"></i>
-                    <h3>Direct Pesan WhatsApp</h3>
-                    <p>Pada menu Bumdes, Pasar Desa, Ojek Desa terdapat pesan direct ke WhatsApp sehingga memudahkan warga desa dalam berkomunikasi dalam proses transaksi jual beli barang dan jasa. </p>
-                </div>
-            </div><!-- Feature-2 -->
-            
+            </div>
+            @endforeach
+
         </div>
     </div>
-</section><!-- Feature Section -->
+</section>
 
 <section id="screenshots" class="screenshots-section bg-grey padding">
     <div class="container">

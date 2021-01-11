@@ -93,6 +93,14 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="{{url('/fitur')}}" class="nav-link">
+                <i class="nav-icon fas fa-list"></i>
+                <p>
+                    Fitur
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{url('/setting-web')}}" class="nav-link">
                 <i class="nav-icon fas fa-cog"></i>
                 <p>
