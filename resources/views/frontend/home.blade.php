@@ -133,11 +133,11 @@
                     <div class="btn-group">
                         @if($set->link_android!='')
                         <a href="{{$set->link_android}}" target="blank()"><img
-                                src="{{asset('assets/frontend/img/appstore.png')}}" alt="btn"></a>
+                                src="{{asset('assets/frontend/img/playstore.png')}}" alt="btn"></a>
                         @endif
                         @if($set->link_iphone!='')
                         <a href="{{$set->link_iphone}}" target="blank()"><img
-                                src="{{asset('assets/frontend/img/playstore.png')}}" alt="btn"></a>
+                                src="{{asset('assets/frontend/img/appstore.png')}}" alt="btn"></a>
                         @endif
                     </div>
                     @endforeach
