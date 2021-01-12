@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 08, 2021 at 10:03 PM
+-- Generation Time: Jan 12, 2021 at 09:14 AM
 -- Server version: 5.7.32-0ubuntu0.18.04.1
 -- PHP Version: 7.3.20-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -44,8 +44,9 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`id`, `judul`, `subjudul`, `slug`, `id_kategori`, `isi`, `gambar`, `pembuat`, `created_at`, `updated_at`) VALUES
-(1, 'asdfasdf', 'asdfsa sf sfdsdf dfasf sdfsaf sdf sf', 'asdfasdf', 1, '<p>hkj hjkhjk hjk jhjk jhjk</p>', '1609666096-flat-thinking-concept_23-2148163823.jpg', 1, '2021-01-03 02:28:16', '2021-01-08 04:30:41'),
-(2, 'And a search for', 'asdfsadfsadf sadfsda sdfsaf sfsafdsa', 'and-a-search-for', 2, '<p>jk kljkl kkk kkkl kljkl</p>', '1609666128-sdf.jpg', 1, '2021-01-03 02:28:48', '2021-01-08 04:30:25');
+(1, 'fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud', 'fugiat-nulla-pariatur.-excepteur-sint-occaecat-cupidatat-non-proident', 1, '<p><i style=\"color: rgb(32, 33, 34); font-family: sans-serif; font-size: 14px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </i><i style=\"color: rgb(32, 33, 34); font-family: sans-serif; font-size: 14px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i><br></p>', '1610178580-young-man-searching-for-jobs-vector.jpg', 1, '2021-01-03 02:28:16', '2021-01-09 00:50:13'),
+(2, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam', 'lorem-ipsum-dolor-sit-amet,-consectetur-adipisicing-elit', 2, '<p><i style=\"color: rgb(32, 33, 34); font-family: sans-serif; font-size: 14px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </i><i style=\"color: rgb(32, 33, 34); font-family: sans-serif; font-size: 14px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i><br></p>', '1609666128-sdf.jpg', 1, '2021-01-03 02:28:48', '2021-01-09 00:50:03'),
+(3, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud', 'lorem-ipsum-dolor-sit-amet,-consectetur-adipisicing-elit,-sed', 2, '<p><i style=\"color: rgb(32, 33, 34); font-family: sans-serif; font-size: 14px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&nbsp;</i><i style=\"color: rgb(32, 33, 34); font-family: sans-serif; font-size: 14px;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i><br></p>', '1610178854-download (3).jpg', 1, '2021-01-09 00:54:15', NULL);
 
 -- --------------------------------------------------------
 
@@ -61,6 +62,26 @@ CREATE TABLE `failed_jobs` (
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fitur`
+--
+
+CREATE TABLE `fitur` (
+  `id` int(11) NOT NULL,
+  `header` varchar(200) DEFAULT NULL,
+  `isi` text,
+  `icon` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `fitur`
+--
+
+INSERT INTO `fitur` (`id`, `header`, `isi`, `icon`) VALUES
+(2, 'asdf', 'sadfsa', 'fa fa-child');
 
 -- --------------------------------------------------------
 
@@ -81,8 +102,10 @@ CREATE TABLE `galeri` (
 --
 
 INSERT INTO `galeri` (`id`, `judul`, `gambar`, `created_at`, `updated_at`) VALUES
-(1, 'sdf', '1609666159-1.jpg', '2021-01-03 02:29:19', NULL),
-(2, 'hghjghj', '1609666174-intuit_problem.png', '2021-01-03 02:29:34', NULL);
+(1, 'Image dua', '1610178993-imgbox4.jpg', '2021-01-03 02:29:19', '2021-01-09 00:56:33'),
+(2, 'Image satu', '1610178961-imgbox5.jpg', '2021-01-03 02:29:34', '2021-01-09 00:56:02'),
+(3, 'Image tiga', '1610179125-imgbox3.jpg', '2021-01-09 00:58:45', NULL),
+(4, 'Image empat', '1610179152-imgbox2.jpg', '2021-01-09 00:59:12', NULL);
 
 -- --------------------------------------------------------
 
@@ -229,7 +252,7 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `judul`, `isi`, `link`, `link_text`, `gambar`, `status`) VALUES
-(1, 'Slider Satu', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf', 'facebook.com', 'Download Now', '1610116168-slide dua.png', 'Aktif');
+(1, 'Slider Satu', 'Lorem Ipsum adalah contoh teks atau dummy dalam industri percetakan dan penataan huruf atau typesetting. Lorem Ipsum telah menjadi standar contoh teks sejak tahun 1500an, saat seorang tukang cetak yang tidak dikenal mengambil sebuah kumpulan teks dan mengacaknya untuk menjadi sebuah buku contoh huruf', 'https://m.facebook.com/', 'Download Now', '1610116168-slide dua.png', 'Aktif');
 
 -- --------------------------------------------------------
 
@@ -296,15 +319,16 @@ CREATE TABLE `web_setting` (
   `link_ig` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link_youtube` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `link_android` text COLLATE utf8mb4_unicode_ci,
-  `link_iphone` text COLLATE utf8mb4_unicode_ci
+  `link_iphone` text COLLATE utf8mb4_unicode_ci,
+  `meta` text COLLATE utf8mb4_unicode_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `web_setting`
 --
 
-INSERT INTO `web_setting` (`id`, `nama`, `singkatan`, `deskripsi`, `moto`, `email`, `telp_satu`, `telp_dua`, `logo`, `favicon`, `link_fb`, `link_ig`, `link_youtube`, `link_android`, `link_iphone`) VALUES
-(1, 'halo', 'sfdasadf', '<p>sadfsadf</p>', 'sadf', 'SEKDA@gmail.com', 'sfsdf', '08209284902840', NULL, NULL, 'https://www.facebook.com', 'https://www.instagram.com', 'https://www.youtube.com/', 'android', 'apple');
+INSERT INTO `web_setting` (`id`, `nama`, `singkatan`, `deskripsi`, `moto`, `email`, `telp_satu`, `telp_dua`, `logo`, `favicon`, `link_fb`, `link_ig`, `link_youtube`, `link_android`, `link_iphone`, `meta`) VALUES
+(1, 'KlikDesa', 'KlikDesa', '<p><font face=\"sans-serif\"><span style=\"font-size: 14px;\">Klik Desa adalah Sebuah Aplikasi berbasis web yang terintegrasi dengan aplikasi berbasis mobile (android) yang berguna untuk mempermudah interaksi administrasi, pelayanan publik dan usaha desa antara Pemerintah Desa dan Masyarakat Desa. </span></font></p><p><font face=\"sans-serif\"><span style=\"font-size: 14px;\">Selain terwujudnya komunikasi dan sebagai media informasi, aplikasi klik desa secara tidak langsung dapat meningkatkan ekonomi kreatif dan usaha mikro atau makro masyarakat desa yang akan berdampak pada bertumbuhnya unit-unit usaha BUMDes.</span></font></p>', 'sadf', 'SEKDA@gmail.com', 'sfsdf', '08209284902840', '1610367249-logo.png', '1610367249-logo 2.png', 'https://www.facebook.com', 'https://www.instagram.com', 'https://www.youtube.com/', 'android', 'apple', 'KlikDesa Adalah Aplikasi Desa');
 
 --
 -- Indexes for dumped tables
@@ -320,6 +344,12 @@ ALTER TABLE `artikel`
 -- Indexes for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fitur`
+--
+ALTER TABLE `fitur`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -403,17 +433,22 @@ ALTER TABLE `web_setting`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `fitur`
+--
+ALTER TABLE `fitur`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `halaman`
 --
